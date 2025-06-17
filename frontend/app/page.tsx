@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Typography from "../ui/design/typography/typography";
 
 export default function Home() {
   return (
@@ -13,7 +14,12 @@ export default function Home() {
         height={77.5}
       />
       <div className="flex flex-col items-center justify-center h-screen">
-        <h1 className="text-7xl font-title text-white">NweVa</h1>
+        <Typography variant="display" className="text-white">
+          NweVa
+        </Typography>
+        <Typography variant="subtitle" className="text-white">
+          Web & AI Innovation
+        </Typography>
       </div>
       <Image
         src="/assets/svg/logo.svg"
