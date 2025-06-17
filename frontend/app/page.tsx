@@ -14,7 +14,6 @@ export default function Home() {
       />
       <div className="flex flex-col items-center justify-center h-screen">
         <h1 className="text-7xl font-title text-white">NweVa</h1>
-        <p className="text-2xl font-text text-white">Web & AI Innovation</p>
       </div>
       <Image
         src="/assets/svg/logo.svg"
