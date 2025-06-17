@@ -1,39 +1,39 @@
 export default interface ColorsProps {
-  themeText:
+  themeText?:
     | "primary"
     | "secondary"
     | "accent"
     | "success"
     | "warning"
     | "error";
-  themeBackground:
+  themeBackground?:
     | "primary"
     | "secondary"
     | "accent"
     | "success"
     | "warning"
     | "error";
-  themeBorder:
+  themeBorder?:
     | "primary"
     | "secondary"
     | "accent"
     | "success"
     | "loading"
     | "error";
-  themeButton:
+  themeButton?:
     | "primary"
     | "secondary"
     | "accent"
     | "success"
     | "loading"
     | "error";
-  themeInput:
+  themeInput?:
     | "primary"
     | "secondary"
     | "accent"
     | "success"
     | "waiting"
     | "error";
-  themeCard: "primary" | "secondary" | "accent";
-  themeLink: "primary" | "secondary" | "accent";
+  themeCard?: "primary" | "secondary" | "accent";
+  themeLink?: "primary" | "secondary" | "accent";
 }

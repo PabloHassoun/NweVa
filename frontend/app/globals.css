@@ -11,16 +11,27 @@
 }
 
 :root {
+  --font-display: "ClashDisplay-Regular";
   --font-title: "ClashDisplay-Regular";
-  --font-text: "ClashDisplay-Medium";
+  --font-subtitle: "ClashDisplay-Medium";
+  --font-text: "ClashDisplay-Regular";
 }
 
 @theme {
+  --font-display: var(--font-display);
   --font-title: var(--font-title);
+  --font-subtitle: var(--font-subtitle);
   --font-text: var(--font-text);
   --text-7xl: 64px;
   --text-5xl: 40px;
   --text-2xl: 20px;
+  --color-text-primary: #f7e1b8;
+  --color-text-secondary: #1f1f1f;
+  --color-text-accent: #ff672a;
+  --color-text-success: #2a9d8f;
+  --color-text-warning: #ec5800;
+  --color-text-error: #d22b2b;
+  --color-background-primary: #1f1f1f;
 }
 
 * {
@@ -29,12 +40,4 @@
   box-sizing: border-box;
   margin-block-start: 0;
   margin-block-end: 0;
-}
-
-#home {
-  background-image: url("/assets/img/bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
