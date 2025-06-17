@@ -1,1 +1,37 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "ClashDisplay-Medium";
+  src: url("/public/assets/fonts/ClashDisplay-Medium.woff2");
+}
+
+@font-face {
+  font-family: "ClashDisplay-Regular";
+  src: url("/public/assets/fonts/ClashDisplay-Regular.woff2");
+}
+
+:root {
+  --font-title: "ClashDisplay-Regular";
+  --font-text: "ClashDisplay-Medium";
+}
+
+@theme {
+  --font-title: var(--font-title);
+  --font-text: var(--font-text);
+  --text-7xl: 64px;
+  --text-2xl: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#home {
+  background-image: url("/assets/img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
