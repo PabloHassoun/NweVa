@@ -32,7 +32,7 @@ const Colors = ({ themeText, themeBackground }: ColorsProps) => {
       backgroundColor = "bg-background-primary";
       break;
     case "secondary":
-      backgroundColor = "bg-secondary";
+      backgroundColor = "bg-background-secondary";
       break;
     case "accent":
       backgroundColor = "bg-accent";

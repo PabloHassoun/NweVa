@@ -3,7 +3,7 @@ import ColorsProps from "../../../types/colorsProps";
 import Colors from "../colors/colors";
 
 type TElement = "h1" | "h2" | "h3" | "h4" | "h5" | "p" | "span";
-type TVariants = "display" | "title" | "subtitle" | "body";
+type TVariants = "display" | "title" | "subtitle" | "body" | "nav";
 interface TypographyProps {
   themeText?: ColorsProps["themeText"];
   children: React.ReactNode;
@@ -34,6 +34,9 @@ const Typography = ({
       break;
     case "body":
       variantStyle = "text-xl font-text";
+      break;
+    case "nav":
+      variantStyle = "text-2xl font-nav";
       break;
   }
   return (
