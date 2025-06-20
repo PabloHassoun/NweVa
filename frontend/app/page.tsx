@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div
       className={clsx(
-        "flex flex-col items-center gap-[217px] h-screen",
+        "flex flex-col items-center gap-[217px] h-1800",
         Colors({ themeBackground: "primary" })
       )}
     >
