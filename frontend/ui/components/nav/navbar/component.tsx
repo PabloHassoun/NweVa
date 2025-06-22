@@ -111,20 +111,21 @@ export default function Navbar({ options, className }: NavbarProps) {
     { dependencies: [isInViewport, isMobile] }
   );
 
-  // 3. Animation du menu mobile et du hamburger (inchangée)
+  // 3. Animation du menu mobile et du hamburger (adaptée pour le responsive)
   useGSAP(
     () => {
       gsap.to(menuMobileRef.current, {
         opacity: isMenuOpen ? 1 : 0,
-        x: isMenuOpen ? 0 : 50,
         pointerEvents: isMenuOpen ? "auto" : "none",
+        x: isMobile ? 0 : isMenuOpen ? 0 : 50,
+        y: isMobile ? (isMenuOpen ? 0 : -50) : 0,
         duration: 0.5,
         ease: "power2.out",
       });
 
       hamburgerTimeline.current?.[isMenuOpen ? "play" : "reverse"]();
     },
-    { dependencies: [isMenuOpen] }
+    { dependencies: [isMenuOpen, isMobile] }
   );
 
   // Création de la timeline de l'icône hamburger (inchangée)
@@ -191,9 +192,12 @@ export default function Navbar({ options, className }: NavbarProps) {
       {/* Menu mobile animé */}
       <ul
         ref={menuMobileRef}
-        style={{ transform: "translateX(50px)" }}
+        style={{ transform: isMobile ? "translateY(-50px)" : "translateX(50px)" }}
         className={clsx(
-          "flex flex-col gap-[20px] p-[20px] rounded-[10px] fixed top-5 right-10 z-40 shadow-lg",
+          "flex gap-[20px] p-[20px] rounded-[10px] fixed z-40 shadow-lg",
+          isMobile
+            ? "flex-row top-5 left-1/2 -translate-x-1/2"
+            : "flex-col top-5 right-10",
           "opacity-0 pointer-events-none",
           Colors({ themeBackground: "secondary" }),
           className
